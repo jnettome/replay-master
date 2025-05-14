@@ -1,4 +1,4 @@
-import type { ReplaySource } from "../replay-downloader/types";
+import type { ReplaySource } from "../replay-downloader/types.js";
 
 export interface Command {
 	tick: number;

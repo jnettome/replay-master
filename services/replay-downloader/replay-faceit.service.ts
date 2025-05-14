@@ -1,9 +1,9 @@
 import type { Context, ServiceBroker, ServiceSettingSchema } from "moleculer";
 import { Service } from "moleculer";
 import { fetch } from "undici";
-import type { MatchResponse } from "./replay-faceit";
-import type { ReplayMeta} from "./types";
-import { ReplayOrigin } from "./types";
+import type { MatchResponse } from "./replay-faceit.js";
+import type { ReplayMeta } from "./types.js";
+import { ReplayOrigin } from "./types.js";
 
 interface WebMeta {
 	$statusCode: number;

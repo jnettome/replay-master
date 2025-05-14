@@ -2,7 +2,7 @@ import { randomBytes } from "crypto";
 import { EventEmitter } from "events";
 import type { Socket } from "net";
 import { connect } from "net";
-import { ConnectionError, SocketInitializationError, TimeoutError } from "./errors";
+import { ConnectionError, SocketInitializationError, TimeoutError } from "./errors.js";
 
 
 export type LineCheck = (line: string) => boolean;

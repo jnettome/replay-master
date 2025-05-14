@@ -4,10 +4,10 @@ import ffmpeg from 'async-ffmpeg';
 import fs from 'node:fs';
 import path from 'node:path';
 import pMap from 'p-map';
-import { InitFramesOptions, InitSceneOptions } from '../types/index';
-import { extractVideoFrames } from './extract-video-frames';
-import { extractAudio } from './extract-audio';
-import { InitialScene, Scene } from '../types/internal';
+import { InitFramesOptions, InitSceneOptions } from '../types/index.js';
+import { extractVideoFrames } from './extract-video-frames.js';
+import { extractAudio } from './extract-audio.js';
+import { InitialScene, Scene } from '../types/internal.js';
 
 export const initFrames = async (opts: InitFramesOptions) => {
   const { concurrency, videos, transition, transitions, frameFormat, outputDir, renderAudio = false, verbose } = opts;

@@ -1,4 +1,4 @@
-import type { Death, HighlightResult, Kill, KillsInfo, MatchHalf } from "./types";
+import type { Death, HighlightResult, Kill, KillsInfo, MatchHalf } from "./types.js";
 
 
 export function filterKillsByAttacker(kills: Death[], attacker: string): Death[] {

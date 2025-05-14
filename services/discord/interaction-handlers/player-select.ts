@@ -1,7 +1,7 @@
 import { InteractionHandler, InteractionHandlerTypes } from "@sapphire/framework";
 import type { ButtonInteraction } from "discord.js";
 import type { Player , ReplayEntity } from "../../replay-parser/types";
-import { RoundView } from "../views/round-view";
+import { RoundView } from "../views/round-view.js";
 
 interface InteractionParams {
   player: Player

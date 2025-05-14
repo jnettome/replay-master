@@ -1,5 +1,5 @@
 import { writeFile } from "node:fs/promises";
-import type { Command } from "./types";
+import type { Command } from "./types.js";
 import { create } from 'xmlbuilder2'; 
 export default class HLAEScriptBuilder {
   private _tick: number;

@@ -1,5 +1,5 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js";
-import type { ReplayEntity } from "../../replay-parser/types";
+import type { ReplayEntity } from "../../replay-parser/types.js";
 
 export class PlayerView {
   private replay: ReplayEntity;

@@ -1,12 +1,12 @@
 import { type Context, Service, type ServiceBroker, type ServiceSettingSchema } from "moleculer";
-import parseReplayUrl from "../../utils/parse-replay-url";
-import type { ReplayMeta, ReplaySource, ReplaySteamGetParams } from "../replay-downloader/types";
-import { ReplayOrigin } from "../replay-downloader/types";
+import parseReplayUrl from "../../utils/parse-replay-url.js";
+import type { ReplayMeta, ReplaySource, ReplaySteamGetParams } from "../replay-downloader/types.js";
+import { ReplayOrigin } from "../replay-downloader/types.js";
 import type { ActionReplayParseParams ,
   ReplayEntity,
   ReplayParsed,
   ReplayParseParams,
-} from "./types";
+} from "./types.js";
 
 interface ServiceSettings extends ServiceSettingSchema {
 }

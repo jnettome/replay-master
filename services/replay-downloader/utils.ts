@@ -1,7 +1,7 @@
 import type GlobalOffensive from "globaloffensive";
 import { request } from "undici";
-import type { MatchType, ReplayMeta } from "./types";
-import { ReplayOrigin } from "./types";
+import type { MatchType, ReplayMeta } from "./types.js";
+import { ReplayOrigin } from "./types.js";
 
 export interface MatchHistoryResponse {
   result: {

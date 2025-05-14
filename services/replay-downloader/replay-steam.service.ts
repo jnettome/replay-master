@@ -3,9 +3,9 @@ import GlobalOffensive from "globaloffensive";
 import type { Context, ServiceBroker, ServiceSettingSchema } from "moleculer";
 import { Service } from "moleculer";
 import SteamUser from "steam-user";
-import type { WebMeta } from "../types";
-import type { ReplayMeta, ReplaySteamGetParams } from "./types";
-import { matchToReplayMeta } from "./utils";
+import type { WebMeta } from "../types.js";
+import type { ReplayMeta, ReplaySteamGetParams } from "./types.js";
+import { matchToReplayMeta } from "./utils.js";
 
 
 interface ServiceSettings extends ServiceSettingSchema {

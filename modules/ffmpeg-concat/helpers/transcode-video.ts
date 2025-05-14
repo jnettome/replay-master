@@ -1,7 +1,7 @@
 import ffmpeg from 'fluent-ffmpeg';
 import onTranscodeProgress from 'ffmpeg-on-progress';
-import { Log } from '../types/index';
-import { OnProgress, Theme } from '../types/internal';
+import { Log } from '../types/index.js';
+import { OnProgress, Theme } from '../types/internal.js';
 import type { Writable } from "stream";
 
 interface TranscodeVideoOpts {

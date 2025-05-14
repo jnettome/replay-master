@@ -1,8 +1,8 @@
-import type { ResizeMode, Theme } from '../types/internal';
-import type { FrameFormat } from '../types/index';
+import type { ResizeMode, Theme } from '../types/internal.js';
+import type { FrameFormat } from '../types/index.js';
 import GL from 'gl';
-import { FrameWriter, createFrameWriter } from './frame-writer';
-import { DrawOpts, getTransition } from './transition';
+import { FrameWriter, createFrameWriter } from './frame-writer.js';
+import { DrawOpts, getTransition } from './transition.js';
 
 interface ContextOpts {
   frameFormat: FrameFormat;

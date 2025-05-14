@@ -7,9 +7,11 @@
   "scripts": {
     "clean": "rimraf dist/",
     "build": "npm run clean && tsc --project tsconfig.build.json",
+    "build:cjs": "tsc --project tsconfig.build-cjs.json",
+    "postbuild": "npm run build:cjs",
     "dev": "tsx ./node_modules/moleculer/bin/moleculer-runner.js -e --config moleculer.config.ts --hot --repl services/**/*.service.ts !./**/file.service.ts",
     "dev:recorder": "tsx ./node_modules/moleculer/bin/moleculer-runner.js -e --config moleculer.config.ts --hot --repl services/replay-recorder/*.service.ts",
-    "start": "moleculer-runner --config dist/moleculer.config.js -e dist/services/**/*.service.js !dist/services/**/file.service.js",
+    "start": "moleculer-runner --config ./moleculer.config.cjs -e dist/services/**/*.service.js !dist/services/**/file.service.js",
     "start:recorder": "moleculer-runner --config dist/moleculer.config.js -e dist/services/replay-recorder/*.service.js",
     "test:types": "concurrently npm:prettier npm:lint npm:typecheck",
     "typecheck": "tsc --noEmit && echo \"tsc: no typecheck errors\"",

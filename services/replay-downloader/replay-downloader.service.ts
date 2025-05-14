@@ -6,8 +6,8 @@ import type { Context, ServiceBroker, ServiceSettingSchema } from "moleculer";
 import { Service } from "moleculer";
 import unbzip2 from "unbzip2-stream";
 import { request } from "undici";
-import type { WebMeta } from "../types";
-import type { ActionDownloadParams } from "./types";
+import type { WebMeta } from "../types.js";
+import type { ActionDownloadParams } from "./types.js";
 
 const exec = promisify(execCallback);
 

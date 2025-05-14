@@ -4,7 +4,7 @@ import { dirname, join } from "node:path";
 import type { Readable } from "stream";
 import { pipeline } from "stream/promises";
 import type { ServiceBroker } from "moleculer";
-import type { ActionDownloadParams, DownloadReplayOptions, ReplaySource } from "../services/replay-downloader/types";
+import type { ActionDownloadParams, DownloadReplayOptions, ReplaySource } from "../services/replay-downloader/types.js";
 
 export default async function getReplayPath(meta: Required<ReplaySource>, broker: ServiceBroker, replayDir: string): Promise<string> {
   const objectName = `${meta.origin}/${meta.sharecode}.dem`;

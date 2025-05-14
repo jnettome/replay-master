@@ -1,8 +1,8 @@
-import type {  Context,  ServiceBroker } from "moleculer";
+import type { Context, ServiceBroker } from "moleculer";
 import { Service } from "moleculer";
-import type { SettingsSchema } from "../../mixins/minio.mixin";
-import MinioMixin from "../../mixins/minio.mixin";
-import type { DownloadReplayOptions, UploadReplayOptions } from "./types";
+import type { SettingsSchema } from "../../mixins/minio.mixin.js";
+import MinioMixin from "../../mixins/minio.mixin.js";
+import type { DownloadReplayOptions, UploadReplayOptions } from "./types.js";
 
 export default class FileService extends Service<SettingsSchema> {
 

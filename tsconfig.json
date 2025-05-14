@@ -11,7 +11,7 @@
     "noImplicitOverride": true,
     // not-sure-ends
 
-    "lib": ["ES2023"],
+    "lib": ["ES2023", "dom"],
     "target": "ES2022",
     "module": "ESNext",
     "allowJs": true,

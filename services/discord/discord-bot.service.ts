@@ -47,7 +47,7 @@ export default class DiscordBotService extends Service<ServiceSettings> {
         level: LogLevel.Debug,
       },
       intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions],
-      baseUserDirectory: path.join(__dirname),
+      baseUserDirectory: path.join(process.cwd(), 'dist/services/discord'),
       loadMessageCommandListeners: true,
     });
 

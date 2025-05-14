@@ -1,12 +1,12 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-import { temporaryDirectory } from "./helpers/utils";
-import type { ConcatOptions } from './types/index';
+import { temporaryDirectory } from "./helpers/utils.js";
+import type { ConcatOptions } from './types/index.js';
 import fs from 'fs';
 import fsp from 'node:fs/promises';
-import { initFrames } from './helpers/init-frames';
-import { renderFrames } from './helpers/render-frames';
-import { transcodeVideo } from './helpers/transcode-video';
-import { renderAudio } from './helpers/render-audio';
+import { initFrames } from './helpers/init-frames.js';
+import { renderFrames } from './helpers/render-frames.js';
+import { transcodeVideo } from './helpers/transcode-video.js';
+import { renderAudio } from './helpers/render-audio.js';
 
 
 // eslint-disable-next-line no-empty-function
@@ -97,5 +97,5 @@ const concat = async (opts: ConcatOptions) => {
 
 export default concat;
 
-export { default as transitions, type TransitionName } from './helpers/transitions-wrap';
-export type { ConcatOptions, ExtractAudioOpts, FrameFormat, InitFramesOptions, InitSceneOptions, Log, Transition } from './types/index';
+export { default as transitions, type TransitionName } from './helpers/transitions-wrap.js';
+export type { ConcatOptions, ExtractAudioOpts, FrameFormat, InitFramesOptions, InitSceneOptions, Log, Transition } from './types/index.js';

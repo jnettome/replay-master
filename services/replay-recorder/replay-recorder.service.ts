@@ -7,15 +7,15 @@ import { join, resolve } from "node:path";
 import * as process from "process";
 import Stream from "stream";
 import  { Readable } from "stream";
-import concat from "../../modules/ffmpeg-concat";
-import getReplayPath from "../../utils/get-replay-path";
-import randomString from "../../utils/random-string";
-import type { ReplayEntity } from "../replay-parser/types";
-import { calculateBitrate, getKillsByRound, getKillsInfo, singleHighlight } from "../replay-parser/utils";
-import makeScript from "./hlae-cs2-script";
-import SourceTelnet from "./source-telnet";
-import type { ActionReplayRecordParams, CS2ScriptOptions, Highlight, HighlightRequest } from "./types";
-import { mergeVideoAndAudio } from "./utils";
+import concat from "../../modules/ffmpeg-concat/index.js";
+import getReplayPath from "../../utils/get-replay-path.js";
+import randomString from "../../utils/random-string.js";
+import type { ReplayEntity } from "../replay-parser/types.js";
+import { calculateBitrate, getKillsByRound, getKillsInfo, singleHighlight } from "../replay-parser/utils.js";
+import makeScript from "./hlae-cs2-script.js";
+import SourceTelnet from "./source-telnet.js";
+import type { ActionReplayRecordParams, CS2ScriptOptions, Highlight, HighlightRequest } from "./types.js";
+import { mergeVideoAndAudio } from "./utils.js";
 
 interface ServiceSettings {
   hlaeDir: string;
@@ -302,11 +302,11 @@ export default class ReplayRecorderService extends Service<ServiceSettings> {
       "-noGui",
       "-autoStart",
       "-hookDllPath",
-      join(this.settings.hlaeDir, "x64/AfxHookSource2.dll"),
+      join("C:/Users/phdjp/OneDrive/Desktop/hlae_2_182_6/", "x64/AfxHookSource2.dll"),
       "-programPath",
-      join(csgoDir, "bin/win64/cs2.exe"),
+      join("D:/SteamLibrary/steamapps/common/Counter-Strike Global Offensive/game/", "bin/win64/cs2.exe"),
       "-cmdLine",
-      `-w ${width} -h ${height} -window -netconport ${port} -console -novid -tools -noassetbrowser -insecure -steam +sv_lan 1`,
+      `-w ${width} -h ${height} -window +hostip 0.0.0.0 -netconport ${port} -dev -console -novid -tools -noassetbrowser -insecure -steam +sv_lan 1`,
       "-addEnv",
       `USRLOCALCSGO=${mmCfgPath}`,
     ];
@@ -321,9 +321,18 @@ export default class ReplayRecorderService extends Service<ServiceSettings> {
     try {
       const hlaeBin = join(this.settings.hlaeDir, "hlae.exe");
       const args = this.craft_hlae_args(port);
-      const process = execa(hlaeBin, args, { timeout: 5_000, reject: false });
+      
+      this.logger.info("Process EXECA 1")
+      const process = execa(hlaeBin, args, { timeout: 30_000, reject: false });
+
+      this.logger.info("Process EXECA 2")
+
+      await new Promise(resolve => setTimeout(resolve, 40_000));
+
+      this.logger.info("Awaited 40_000")
 
       await telnet.connect().then(async () => {
+        this.logger.info("telnet connect")
         process.kill();
 
         const startupCommands: string[] = [

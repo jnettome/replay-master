@@ -3,8 +3,8 @@ import type { Readable } from "stream";
 import { pipeline } from "stream/promises";
 import { InteractionHandler, InteractionHandlerTypes } from "@sapphire/framework";
 import type { ButtonInteraction } from "discord.js";
-import type { Player, ReplayEntity } from "../../replay-parser/types";
-import type { ActionReplayRecordParams, Highlight, HighlightRequest } from "../../replay-recorder/types";
+import type { Player, ReplayEntity } from "../../replay-parser/types.js";
+import type { ActionReplayRecordParams, Highlight, HighlightRequest } from "../../replay-recorder/types.js";
 
 interface InteractionParams {
   player: Player;

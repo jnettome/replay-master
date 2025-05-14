@@ -1,7 +1,7 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from "discord.js";
-import type { KillsInfo , Player, ReplayEntity } from "../../replay-parser/types";
-import { getKillsInfo } from "../../replay-parser/utils";
-import { TableBuilder } from "./table";
+import type { KillsInfo , Player, ReplayEntity } from "../../replay-parser/types.js";
+import { getKillsInfo } from "../../replay-parser/utils.js";
+import { TableBuilder } from "./table.js";
 
 
 export class RoundView {

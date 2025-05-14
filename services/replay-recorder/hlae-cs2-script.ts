@@ -1,5 +1,5 @@
-import HLAEScriptBuilder from "./hlae-script-builder";
-import type { CS2ScriptOptions } from "./types";
+import HLAEScriptBuilder from "./hlae-script-builder.js";
+import type { CS2ScriptOptions } from "./types.js";
 
 export default function makeScript(options: CS2ScriptOptions): HLAEScriptBuilder {
   const c = new HLAEScriptBuilder();

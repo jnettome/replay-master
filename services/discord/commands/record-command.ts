@@ -3,7 +3,7 @@ import { Command } from "@sapphire/framework";
 import { ChatInputCommandInteraction } from "discord.js";
 import { ReplayEntity, ReplayParseParams } from "../../replay-parser/types";
 import { DiscordTaskEntity } from "../types";
-import { PlayerView } from "../views/player-view";
+import { PlayerView } from "../views/player-view.js";
 
 @ApplyOptions<Command.Options>({
   name: "record",

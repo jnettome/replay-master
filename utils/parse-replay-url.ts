@@ -1,5 +1,5 @@
-import type { ReplaySource } from "../services/replay-downloader/types";
-import { ReplayOrigin } from "../services/replay-downloader/types";
+import type { ReplaySource } from "../services/replay-downloader/types.js";
+import { ReplayOrigin } from "../services/replay-downloader/types.js";
 
 function extractSteamMatch(url: string): ReplaySource | undefined {
   const regex = /^(?:steam:\/\/rungame\/730\/\d+\/\+csgo_download_match )?(CSGO-([A-Za-z0-9]{5}-){4}[A-Za-z0-9]{5})$/;

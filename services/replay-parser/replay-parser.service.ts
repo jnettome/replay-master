@@ -1,8 +1,8 @@
 import { parseEvents, parseHeader } from "@laihoe/demoparser2";
 import type { Context, ServiceBroker, ServiceSettingSchema } from "moleculer";
 import { Service } from "moleculer";
-import getReplayPath from "../../utils/get-replay-path";
-import type { ActionReplayParseParams, MatchHalf, Player, ReplayParsed } from "./types";
+import getReplayPath from "../../utils/get-replay-path.js";
+import type { ActionReplayParseParams, MatchHalf, Player, ReplayParsed } from "./types.js";
 
 interface Event {
   [key: string]: any;

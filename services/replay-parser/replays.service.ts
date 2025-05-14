@@ -1,10 +1,10 @@
 import type { Context, Service, ServiceSchema } from "moleculer";
 import type { DbAdapter, DbServiceSettings, MoleculerDbMethods } from "moleculer-db";
 import type MongoDbAdapter from "moleculer-db-adapter-mongo";
-import type { DbServiceMethods } from "../../mixins/db.mixin";
-import DbMixin from "../../mixins/db.mixin";
-import { ReplayOrigin } from "../replay-downloader/types";
-import type { ReplayEntity } from "./types";
+import type { DbServiceMethods } from "../../mixins/db.mixin.js";
+import DbMixin from "../../mixins/db.mixin.js";
+import { ReplayOrigin } from "../replay-downloader/types.js";
+import type { ReplayEntity } from "./types.js";
 
 type ActionCreateParams = Partial<ReplayEntity>;
 

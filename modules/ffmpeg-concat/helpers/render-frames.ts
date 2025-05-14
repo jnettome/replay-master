@@ -1,9 +1,9 @@
-import type { FrameFormat } from '../types/index';
-import type { Frame, OnProgress, Theme } from '../types/internal';
+import type { FrameFormat } from '../types/index.js';
+import type { Frame, OnProgress, Theme } from '../types/internal.js';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import pMap from 'p-map';
-import { Context, createContext } from './context';
+import { Context, createContext } from './context.js';
 
 interface RenderFramesOpts {
   frameFormat: FrameFormat;

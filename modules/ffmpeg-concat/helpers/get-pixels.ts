@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import getpixels from 'get-pixels';
 import ndarray from 'ndarray';
-import { getFileExt } from './get-file-ext';
+import { getFileExt } from './get-file-ext.js';
 
 // MAKE SURE TO NOTICE THE DIFFERENCES BETWEEEN getPixels AND getpixels!!!
 

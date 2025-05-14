@@ -208,5 +208,5 @@ const brokerConfig: BrokerOptions = {
 
 };
 
-export = brokerConfig;
-
+// export = brokerConfig;
+export default brokerConfig;

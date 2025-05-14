@@ -1,9 +1,9 @@
 import type { Context, Service, ServiceSchema } from "moleculer";
 import type { DbAdapter, DbServiceSettings, MoleculerDbMethods } from "moleculer-db";
 import type MongoDbAdapter from "moleculer-db-adapter-mongo";
-import type { DbServiceMethods } from "../../mixins/db.mixin";
-import DbMixin from "../../mixins/db.mixin";
-import type { DiscordTaskEntity } from "./types";
+import type { DbServiceMethods } from "../../mixins/db.mixin.js";
+import DbMixin from "../../mixins/db.mixin.js";
+import type { DiscordTaskEntity } from "./types.js";
 
 
 export type ActionCreateParams = Partial<DiscordTaskEntity>;

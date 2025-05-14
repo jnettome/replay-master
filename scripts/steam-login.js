@@ -1,5 +1,5 @@
-const readline = require('readline');
-const SteamUser = require('steam-user');
+import readline from 'readline';
+import SteamUser from 'steam-user';
 
 const rl = readline.createInterface({
   input: process.stdin,

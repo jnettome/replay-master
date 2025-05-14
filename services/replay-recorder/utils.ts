@@ -9,12 +9,16 @@ export async function mergeVideoAndAudio(video: string, audio: string, output: s
   audioBitrate = 192,
   ffmpegPath,
 }: MergeOptions) {
-  return execa(ffmpegPath, [
-    "-i", video,
-    "-i", audio,
-    "-c:v", "copy",
-    "-c:a", "aac",
-    "-b:a", `${audioBitrate}k`,
-    "-y", output,
-  ]);
+  try {
+    return execa(ffmpegPath, [
+      "-i", video,
+      "-i", audio,
+      "-c:v", "copy",
+      "-c:a", "aac",
+      "-b:a", `${audioBitrate}k`,
+      "-y", output,
+    ]);
+  } catch (error) {
+    throw new Error(`Failed to merge video and audio: ${error.message}`);
+  }
 }

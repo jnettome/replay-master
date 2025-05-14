@@ -1,5 +1,5 @@
-import type { Log } from '../types/index';
-import type { Scene } from '../types/internal';
+import type { Log } from '../types/index.js';
+import type { Scene } from '../types/internal.js';
 import fsp from 'node:fs/promises';
 import ffmpeg from 'fluent-ffmpeg';
 import path from 'node:path';

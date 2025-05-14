@@ -1,5 +1,5 @@
-import type {Writable} from "stream";
-import type { DefaultParams, TransitionName } from '../helpers/transitions-wrap';
+import type { Writable } from "stream";
+import type { DefaultParams, TransitionName } from '../helpers/transitions-wrap.js';
 
 export type FrameFormat = 'jpg' | 'png' | 'raw' | undefined;
 
